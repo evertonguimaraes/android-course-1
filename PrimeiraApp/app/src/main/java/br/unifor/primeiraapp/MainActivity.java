@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mTextViewResposta = (TextView) findViewById(R.id.textView2);
-        mEditTextNome = (EditText) findViewById(R.id.editText1);
+        mEditTextNome = (EditText) findViewById(R.id.editTextFacaNaCaveira);
         mButtonCliqueAqui = (Button) findViewById(R.id.button1);
 
         mButtonCliqueAqui.setOnClickListener(new View.OnClickListener() {
@@ -30,6 +30,30 @@ public class MainActivity extends AppCompatActivity {
                 mTextViewResposta.setText("Olá "+nome+"Bem vindo ao curso de Android");
             }
         });
+    }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
     }
 }
