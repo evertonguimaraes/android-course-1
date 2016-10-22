@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button1"
-        android:layout_below="@+id/editText1"
+        android:layout_below="@+id/editTextFacaNaCaveira"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
 
@@ -34,7 +34,7 @@
         android:inputType="textPersonName"
         android:text="Name"
         android:ems="10"
-        android:id="@+id/editText1"
+        android:id="@+id/editTextFacaNaCaveira"
         android:layout_below="@+id/textView1"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
