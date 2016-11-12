@@ -1,18 +1,22 @@
 package br.unifor.primeiraapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends AppCompatActivity implements View.OnLongClickListener {
 
     private TextView mTextViewMensagem;
     private TextView mTextViewResposta;
     private EditText mEditTextNome;
     private Button mButtonCliqueAqui;
+    private Button mMainButtonWelcome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,30 +34,62 @@ public class MainActivity extends AppCompatActivity {
                 mTextViewResposta.setText("Olá "+nome+"Bem vindo ao curso de Android");
             }
         });
-    }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
+        mMainButtonWelcome = (Button) findViewById(R.id.button1);
+        mMainButtonWelcome.setOnLongClickListener(this);
+
+        Log.i("App", "método onCreate() chamado");
+
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
+        Log.i("App", "método onRestart() chamado");
     }
 
     @Override
-    protected void onPause() {
-        super.onPause();
+    protected void onStart() {
+        super.onStart();
+        Log.i("App", "método onStart() chamado");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+        Log.i("App", "método onResume() chamado");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.i("App", "método onPause() chamado");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
+        Log.i("App", "método onStop() chamado");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.i("App", "método onDestroy() chamado");
+    }
+
+    @Override
+    public boolean onLongClick(View v) {
+
+        switch (v.getId()){
+            case R.id.button1:
+
+                Intent it = new Intent(this, SecondaryActivity.class);
+                startActivity(it);
+
+                break;
+        }
+
+        return false;
     }
 }

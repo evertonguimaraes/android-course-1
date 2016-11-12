@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_first_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="br.unifor.segundaapp.FirstActivity">
+
+    <TextView
+        android:text="@string/text_view_nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textViewNome"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="@string/text_view_telefone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextNome"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textViewTelefone"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/textViewTelefone"
+        android:layout_alignParentStart="true"
+        android:id="@+id/editTextTelefone"
+        android:layout_alignParentEnd="true"
+        android:hint="@string/edit_text_telefone_hint" />
+
+    <TextView
+        android:text="@string/text_view_endereco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextTelefone"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textViewEndereco" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/textViewEndereco"
+        android:layout_alignParentStart="true"
+        android:id="@+id/editTextEndereco"
+        android:layout_alignParentEnd="true"
+        android:hint="@string/edit_text_endereco_hint" />
+
+    <TextView
+        android:text="@string/text_view_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextEndereco"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textViewEmail" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/textViewEmail"
+        android:layout_alignParentStart="true"
+        android:id="@+id/editTextEmail"
+        android:hint="@string/edit_text_email_hint"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editTextNome"
+        android:layout_below="@+id/textViewNome"
+        android:layout_alignParentStart="true"
+        android:hint="@string/edit_text_nome_hint"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="@string/button_limpar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonLimpar"
+        android:layout_below="@+id/editTextEmail"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="@string/button_mensagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonLimpar"
+        android:layout_alignParentStart="true"
+        android:id="@+id/buttonMensagem"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>
