@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">SegundaApp</string>
+
+    <!-- Criamos variaveis com chave-valor para cada elemento de interface do tipo EditText-->
+    <string name="text_view_nome">Nome: </string>
+    <string name="text_view_telefone">Telefone</string>
+    <string name="text_view_endereco">Endereço</string>
+    <string name="text_view_email">Email</string>
+
+    <!-- Criamos variaveis com chave-valor para cada elemento de interface do tipo Button-->
+    <string name="button_limpar">Limpar Campos</string>
+    <string name="button_mensagem">Mostrar Mensagem</string>
+
+    <!-- Criamos variaveis com chave-valor para informar o hint dos elementos do tipo EditText-->
+    <string name="edit_text_nome_hint">Digite seu nome. </string>
+    <string name="edit_text_telefone_hint">Informe seu numero de telefone</string>
+    <string name="edit_text_endereco_hint">Endereço Residencial</string>
+    <string name="edit_text_email_hint">Email institucional</string>
+</resources>
