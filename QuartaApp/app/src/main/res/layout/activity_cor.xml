@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_cor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="br.unifor.cores.CorActivity">
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cor_seek_vermelho"
+        android:layout_alignEnd="@+id/cor_seek_vermelho"
+        android:layout_marginTop="44dp"
+        android:id="@+id/cor_seek_verde"
+        android:max="255" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cor_seek_verde"
+        android:layout_alignEnd="@+id/cor_seek_verde"
+        android:layout_marginTop="50dp"
+        android:id="@+id/cor_seek_azul"
+        android:max="255" />
+
+    <TextView
+        android:text="Vermelho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/cor_seek_verde"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="33dp"
+        android:id="@+id/textView" />
+
+    <TextView
+        android:text="Verde"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cor_seek_vermelho"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"
+        android:id="@+id/textView2" />
+
+    <TextView
+        android:text="Azul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cor_seek_verde"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:id="@+id/textView3" />
+
+    <Button
+        android:text="Voltar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cor_seek_azul"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:id="@+id/cor_voltar" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:id="@+id/cor_seek_vermelho"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:max="255" />
+</RelativeLayout>
