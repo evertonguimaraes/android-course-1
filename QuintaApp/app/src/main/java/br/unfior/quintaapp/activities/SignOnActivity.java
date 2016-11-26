@@ -1,4 +1,4 @@
-package br.unfior.quintaapp;
+package br.unfior.quintaapp.activities;
 
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -6,11 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import br.unfior.quintaapp.R;
 import br.unfior.quintaapp.model.User;
 import br.unfior.quintaapp.repository.UserRepository;
 
-public class SignInActivity extends AppCompatActivity implements View.OnClickListener {
+public class SignOnActivity extends AppCompatActivity implements View.OnClickListener {
 
     private EditText mName;
     private EditText mUsername;
@@ -69,9 +71,9 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                     User user = new User(name, username, password);
                     userRepository.insert(user);
 
-                    Snackbar.make(view,
+                    Toast.makeText(this,
                             "Usuário cadastrado com sucesso",
-                            Snackbar.LENGTH_SHORT).show();
+                            Toast.LENGTH_SHORT).show();
 
                     finish();
 

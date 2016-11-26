@@ -1,5 +1,6 @@
 package br.unfior.quintaapp.activities;
 
+import android.content.Intent;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,7 +9,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.List;
+
 import br.unfior.quintaapp.R;
+import br.unfior.quintaapp.model.User;
+import br.unfior.quintaapp.repository.UserRepository;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -17,11 +22,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private TextView mSingon;
     private Button mSingin;
 
+    private UserRepository userRepository;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
         // Recuperar as referências dos objetos visuais
         mUsername = (EditText) findViewById(R.id.login_edittext_username);
@@ -33,6 +40,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         mSingin.setOnClickListener(this);
         mSingon.setOnClickListener(this);
 
+        userRepository = UserRepository.getInstance();
+
     }
 
     @Override
@@ -41,7 +50,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         switch (view.getId()){
 
             case R.id.login_textview_singon:
-                //TODO: Clique do text view
+
+                Intent it = new Intent(this, SignOnActivity.class);
+                startActivity(it);
+
                 break;
 
             case R.id.login_button_singin:
@@ -64,16 +76,28 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                 if (isValid){
 
-                    // TODO: Realizar login
+                    List<User> users = userRepository.findAll();
+
+                    for(User user: users){
+                        if(user.getUsername().equals(username)
+                                && user.getPassword().equals(password)){
+
+                            Intent mainActivityIntent = new Intent(this, MainActivity.class);
+                            startActivity(mainActivityIntent);
+                            finish();
+                        }
+
+                    }
+
+                    Snackbar.make(view,
+                            "Usuário ou senha inválidos",
+                            Snackbar.LENGTH_SHORT).show();
 
                 } else {
                     Snackbar.make(view,
                             "Preencha os campos solicitados.",
                             Snackbar.LENGTH_SHORT).show();
                 }
-
-
-
 
                 break;
         }
