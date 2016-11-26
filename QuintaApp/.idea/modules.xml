@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/QuartaApp.iml" filepath="$PROJECT_DIR$/QuartaApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QuintaApp.iml" filepath="$PROJECT_DIR$/QuintaApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
