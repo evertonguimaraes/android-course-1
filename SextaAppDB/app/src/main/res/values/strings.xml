@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Unifor Courses</string>
+
+    <!-- Strings to the CourseListScreen elements -->
+    <string name="course_list_screen_title"> Courses List </string>
+
+    <!-- Strings to the NewCourseScreen elements -->
+    <string name="new_course_screen_name"> Name </string>
+    <string name="new_course_screen_working_plan"> Working Plan </string>
+    <string name="new_course_screen_hours"> Course Hours </string>
+    <string name="new_course_screen_work_shift"> Working Shift </string>
+
+    <string name="new_course_screen_button_insert"> Insert </string>
+    <string name="new_course_screen_button_clean"> Clean </string>
+    <string name="title_activity_navigation_drawer_screen">NavigationDrawerScreen</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+</resources>
