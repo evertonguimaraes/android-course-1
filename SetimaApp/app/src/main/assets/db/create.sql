@@ -1,0 +1,20 @@
+CREATE TABLE usuario (
+	id	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	nome TEXT NOT NULL,
+	email TEXT NOT NULL,
+	senha TEXT NOT NULL
+);
+
+CREATE TABLE disciplina (
+	id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	nome TEXT NOT NULL,
+	descricao TEXT);
+
+CREATE TABLE matricula (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	id_usuario INTEGER NOT NULL,
+	id_disciplina INTEGER NOT NULL,
+	data TEXT,
+	FOREIGN KEY (id_usuario) REFERENCES usuario(id),
+	FOREIGN KEY (id_disciplina) REFERENCES disciplina(id),
+);

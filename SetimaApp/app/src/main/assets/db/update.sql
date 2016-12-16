@@ -1,0 +1,3 @@
+DROP TABLE IF EXISTS matricula;
+DROP TABLE IF EXISTS usuario;
+DROP TABLE IF EXISTS disciplina;
